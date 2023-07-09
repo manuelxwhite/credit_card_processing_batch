@@ -16,7 +16,10 @@ Since Ruby is an interpreted language, there is no need for explicit building or
 Running the Code and Tests:
 To run the code, you can follow these steps:
 1. Open a terminal or command prompt.
-2. clone the project repository, executing the following command in the terminal `git clone git@github.com:manuelxwhite/credit_card_processing_batch.git`.
+2. clone the project repository, executing the following command in the terminal:
+   ```
+   git clone git@github.com:manuelxwhite/credit_card_processing_batch.git
+   ```
 3. Navigate to the directory where the project was saved `cd credit_card_processing_batch`.
 4. To install all the framework dependencies use the following command:
    ```
@@ -28,6 +31,11 @@ To run the code, you can follow these steps:
    bundle exec rake process_file test.txt
    ```
    Replace `test.txt` with the actual filename containing the input commands.
+
+   or execute the following command for capturing STDIN in the terminal
+    ```
+   bundle exec rake process_file
+   ```
 6. The program will process the input commands and generate the summary output, which will be displayed in the terminal.
 
 Testing:
