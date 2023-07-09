@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
-task process_file: [:environment] do |_t, _args|
-  file = ARGV.each { |a| task a.to_s do; end }.pop
-
-  puts "Processing batch file: #{file}"
-
+def process_file(file)
   if File.exist?("./batch_files/#{file}")
     batch_string = File.read("./batch_files/#{file}")
     transaction_batch = TransactionBatch.new(batch_string)
@@ -13,5 +9,17 @@ task process_file: [:environment] do |_t, _args|
     end
   else
     puts 'File not found'
+  end
+end
+
+task process_file: [:environment] do |_t, _args|
+  file = ARGV.each { |a| task a.to_s }.pop
+
+  if file.nil? || file == 'process_file'
+    puts 'provide a file name'
+    input_file = gets
+    process_file(input_file.chomp)
+  else
+    process_file(file)
   end
 end
