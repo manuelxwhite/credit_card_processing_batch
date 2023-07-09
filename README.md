@@ -20,7 +20,10 @@ To run the code, you can follow these steps:
    ```
    git clone git@github.com:manuelxwhite/credit_card_processing_batch.git
    ```
-3. Navigate to the directory where the project was saved `cd credit_card_processing_batch`.
+3. Navigate to the directory where the project was saved 
+   ```
+   cd credit_card_processing_batch
+   ```
 4. To install all the framework dependencies use the following command:
    ```
    bundle install
