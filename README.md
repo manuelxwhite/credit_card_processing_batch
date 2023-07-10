@@ -2,6 +2,7 @@
 
 
 Design Decisions:
+![CC-Eng-Design](https://github.com/manuelxwhite/credit_card_processing_batch/assets/16273215/8c89a3c0-f72b-4af2-8385-c94a61de6ca3)
 
 
 Programming Language Choice:
