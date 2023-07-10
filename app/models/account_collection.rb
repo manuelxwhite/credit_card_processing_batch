@@ -17,15 +17,6 @@ class AccountCollection
     @accounts.find { |account| account.account_owner == name }
   end
 
-  def find_or_create_account(name)
-    account = find_account(name)
-    if account.nil?
-      account = Account.new(name)
-      @accounts << account
-    end
-    account
-  end
-
   def increase_limit(name, amount)
     account = find_account(name)
     account.limit += amount
@@ -36,6 +27,15 @@ class AccountCollection
   end
 
   private
+
+  def find_or_create_account(name)
+    account = find_account(name)
+    if account.nil?
+      account = Account.new(name)
+      @accounts << account
+    end
+    account
+  end
 
   def exists?(card_number)
     find_account(card_number) != nil
